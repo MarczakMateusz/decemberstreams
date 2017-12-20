@@ -8,8 +8,8 @@ public class Sum {
         return 0;
     }
 
-    public static int calculate(List<Integer> people) {
-        return 0;
+    public static int calculate(List<Integer> numbers) {
+        return numbers.stream().reduce(0,Integer::sum);
     }
 
 }

@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static java.util.stream.Collectors.groupingBy;
+
 public class Grouping {
 
     public static Map<String, List<Person>> groupByNationality7(List<Person> people) {
@@ -11,7 +13,7 @@ public class Grouping {
     }
 
     public static Map<String, List<Person>> groupByNationality(List<Person> people) {
-        return new HashMap<>();
+        return people.stream().collect(groupingBy(Person::getNationality));
     }
 
 }

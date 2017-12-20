@@ -14,7 +14,7 @@ Sum all elements of a collection
 public class SumTest {
 
     @Test
-    public void transformShouldConvertCollectionElementsToUpperCase() {
+    public void transformShouldSum() {
         List<Integer> numbers = asList(1, 2, 3, 4, 5);
         assertTrue(calculate(numbers) ==  1 + 2 + 3 + 4 + 5);
     }
